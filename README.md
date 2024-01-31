@@ -1,58 +1,24 @@
 **Project Report: Walmart Sales Data Analysis**
 
-**About**
-This project aims to explore the Walmart Sales data to understand top performing branches and products, sales trend of different products, customer behaviour. The aims is to study how sales strategies can be improved and optimized. The dataset was obtained from the Kaggle Walmart Sales Forecasting Competition.
+**About:**
+This project explores Walmart Sales data to gain insights into top-performing branches and products, sales trends, and customer behavior. The dataset was sourced from the Kaggle Walmart Sales Forecasting Competition, providing historical sales data for 45 Walmart stores across different regions.
 
-"In this recruiting competition, job-seekers are provided with historical sales data for 45 Walmart stores located in different regions. Each store contains many departments, and participants must project the sales for each department in each store. To add to the challenge, selected holiday markdown events are included in the dataset. These markdowns are known to affect sales, but it is challenging to predict which departments are affected and the extent of the impact." source
+**Purpose:**
+The primary objective is to understand various factors influencing sales across different Walmart branches to optimize sales strategies effectively.
 
-**Purposes Of The Project**
-The major aim of thie project is to gain insight into the sales data of Walmart to understand the different factors that affect sales of the different branches.
+**Data Description:**
+The dataset comprises sales transactions from three Walmart branches located in Mandalay, Yangon, and Naypyitaw. It contains 17 columns and 1000 rows, detailing information such as invoice ID, branch location, customer type, product details, sales figures, and ratings.
 
-**About Data**
-The dataset was obtained from the Kaggle Walmart Sales Forecasting Competition. This dataset contains sales transactions from three different branches of Walmart, respectively located in Mandalay, Yangon and Naypyitaw. The data contains 17 columns and 1000 rows:
+**Analysis List:**
+1. **Product Analysis:** Explore product lines, identify top-performing and underperforming products.
+2. **Sales Analysis:** Analyze sales trends to evaluate the effectiveness of sales strategies.
+3. **Customer Analysis:** Uncover customer segments, purchase trends, and segment profitability.
 
-**Column**	**Description**	**Data** **Type**
-invoice_id	Invoice of the sales made	VARCHAR(30)
-branch	Branch at which sales were made	VARCHAR(5)
-city	The location of the branch	VARCHAR(30)
-customer_type	The type of the customer	VARCHAR(30)
-gender	Gender of the customer making purchase	VARCHAR(10)
-product_line	Product line of the product sold	VARCHAR(100)
-unit_price	The price of each product	DECIMAL(10, 2)
-quantity	The amount of the product sold	INT
-VAT	The amount of tax on the purchase	FLOAT(6, 4)
-total	The total cost of the purchase	DECIMAL(10, 2)
-date	The date on which the purchase was made	DATE
-time	The time at which the purchase was made	TIMESTAMP
-payment_method	The total amount paid	DECIMAL(10, 2)
-cogs	Cost Of Goods sold	DECIMAL(10, 2)
-gross_margin_percentage	Gross margin percentage	FLOAT(11, 9)
-gross_income	Gross Income	DECIMAL(10, 2)
-rating	Rating	FLOAT(2, 1)
-
-**Analysis List**
-
-Product Analysis:
-Conduct analysis on the data to understand the different product lines, the product lines performing best and the product lines that need to be improved.
-
-Sales Analysis:
-This analysis aims to answer the question of the sales trends of products. The result of this can help us measure the effectiveness of each sales strategy the business applies and what modifications are needed to gain more sales.
-
-Customer Analysis:
-This analysis aims to uncover the different customer segments, purchase trends and the profitability of each customer segment.
-
-Approach Used:
-Data Wrangling: This is the first step where inspection of data is done to make sure NULL values and missing values are detected and data replacement methods are used to replace missing or NULL values.
-Build a database
-Create a table and insert the data.
-Select columns with null values in them. There are no null values in our database as in creating the tables, we set NOT NULL for each field, hence null values are filtered out.
-
-Feature Engineering: This will help us generate some new columns from existing ones.
-Add a new column named time_of_day to give insight of sales in the Morning, Afternoon and Evening. This will help answer the question on which part of the day most sales are made.
-Add a new column named day_name that contains the extracted days of the week on which the given transaction took place (Mon, Tue, Wed, Thur, Fri). This will help answer the question on which week of the day each branch is busiest.
-Add a new column named month_name that contains the extracted months of the year on which the given transaction took place (Jan, Feb, Mar). Help determine which month of the year has the most sales and profit.
-
-Exploratory Data Analysis (EDA): Exploratory data analysis is done to answer the listed questions and aims of this project.
+**Approach Used:**
+1. **Data Wrangling:** Inspection for NULL values, data replacement methods used.
+2. **Build a Database:** Creation of tables and data insertion.
+3. **Feature Engineering:** Addition of new columns for insights on sales patterns.
+4. **Exploratory Data Analysis (EDA):** Investigation of data to answer project objectives and questions.
 
 **Business Questions To Answer:**
 Generic Questions:
@@ -117,3 +83,7 @@ $ \text{VAT} = 5% * COGS\= 5% 320.53 = 16.0265 $
 $ total = VAT + COGS\= 16.0265 + 320.53 = 336.5565 $
 
 $ \text{Gross Margin Percentage} = \frac{\text{gross income}}{\text{total revenue}}\=\frac{16.0265}{336.5565} = 0.047619\\approx 4.7619% $
+
+**Conclusion:**
+
+In summary, the Walmart Sales Data Analysis project has yielded actionable insights into product performance, sales trends, and customer behaviour. Through thorough analysis and feature engineering, the project provides a foundation for informed decision-making and optimization of sales strategies, supporting Walmart's ongoing efforts for success in its various branches.
